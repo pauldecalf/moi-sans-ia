@@ -5,3 +5,4 @@
 # Launch Watch
 
 - npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+- npm run build
