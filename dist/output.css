@@ -534,6 +534,19 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.grid {
+  display: grid;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.bg-pink {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 158 214 / var(--tw-bg-opacity));
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -543,14 +556,14 @@ video {
   font-weight: 700;
 }
 
-.text-red {
-  --tw-text-opacity: 1;
-  color: rgb(231 16 29 / var(--tw-text-opacity));
-}
-
 .text-blue {
   --tw-text-opacity: 1;
   color: rgb(28 95 197 / var(--tw-text-opacity));
+}
+
+.text-red {
+  --tw-text-opacity: 1;
+  color: rgb(231 16 29 / var(--tw-text-opacity));
 }
 
 .underline {
