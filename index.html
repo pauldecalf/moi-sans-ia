@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="/dist/output.css" rel="stylesheet" />
+    <link href="dist/output.css" rel="stylesheet" />
     <title>Creacid</title>
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline text-red">
-      Creacid, agence de communication
-    </h1>
-    <h2 class="text-blue">Moi sans IA, la campagne</h2>
-    <div class="grid grid-cols-3 gap-2">
-      <p class="bg-pink text-center col-span-2">wesh</p>
-      <p class="bg-pink">yoo</p>
-    </div>
+    <main class="bg-grey w-100 h-auto">
+      <div w3-include-html="view/nav.html"></div>
+      <section
+        id="presentation"
+        w3-include-html="view/presentation.html"
+      ></section>
+    </main>
+    <script src="js/script.js"></script>
   </body>
 </html>
