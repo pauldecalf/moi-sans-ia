@@ -15,7 +15,6 @@ function addHTML() {
         if (this.readyState == 4) {
           if (this.status == 200) {
             domEl.innerHTML = this.responseText;
-            window.tailwindcss.recompile();
           }
           if (this.status == 404) {
             domEl.innerHTML = "Page not found.";
@@ -43,3 +42,13 @@ addHTML();
 // for (let i = 0; i < nav.length(); i++) {
 //   nav[i].on("click", (e) => {});
 // }
+
+// Scrolling banner
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollingBanner = document.getElementById("scrolling-banner");
+  const bannerContent = scrollingBanner.innerHTML;
+
+  // Dupliquer le contenu pour assurer le défilement continu
+  scrollingBanner.innerHTML = bannerContent + bannerContent;
+});

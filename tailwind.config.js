@@ -12,7 +12,35 @@ module.exports = {
         orange: "#E96404",
         grey: "#EBE5DE",
       },
+      fontWeight: {
+        extrabold: 800,
+        black: 900,
+        introbold: 1000,
+      },
+      fontSize: {
+        title: "2rem",
+        content: "1rem",
+        intro: "4.5rem",
+      },
+      fontFamily: {
+        secondary: ["Roboto", "sans-serif"],
+        primary: ["Raleway", "serif"],
+      },
+      gridTemplateColumns: {
+        14: "repeat(14, minmax(0, 1fr))",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities, theme, variants }) {
+      const keyframes = {
+        "@keyframes scroll": {
+          from: { transform: "translateX(100%)" },
+          to: { transform: "translateX(-100%)" },
+        },
+      };
+
+      addUtilities(keyframes, ["responsive", "hover"]);
+    },
+  ],
 };
