@@ -1,6 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["index.html", "src/input.css", "js/scripts.js", "view/*.html"],
+  content: [
+    "index.html",
+    "src/input.css",
+    "js/scripts.js",
+    "view/*.html",
+    "./node_modules/flowbite/**/*.js",
+  ],
   theme: {
     extend: {
       colors: {
@@ -21,6 +27,7 @@ module.exports = {
         title: "2rem",
         content: "1rem",
         intro: "4.5rem",
+        us: "6rem",
       },
       fontFamily: {
         secondary: ["Roboto", "sans-serif"],
@@ -29,18 +36,32 @@ module.exports = {
       gridTemplateColumns: {
         14: "repeat(14, minmax(0, 1fr))",
       },
+      keyframes: {
+        banner: {
+          "0%": { transform: "translateX(-200%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+      },
+      animation: {
+        banner: "banner 10s forwards linear infinite",
+      },
+      translate: {
+        "banner-right": "-200%",
+        "banner-left": "0",
+      },
     },
   },
-  plugins: [
-    function ({ addUtilities, theme, variants }) {
-      const keyframes = {
-        "@keyframes scroll": {
-          from: { transform: "translateX(100%)" },
-          to: { transform: "translateX(-100%)" },
-        },
-      };
+  // plugins: [
+  //   function ({ addUtilities, theme, variants }) {
+  //     const keyframes = {
+  //       "@keyframes scroll": {
+  //         from: { transform: "translateX(100%)" },
+  //         to: { transform: "translateX(-100%)" },
+  //       },
+  //     };
 
-      addUtilities(keyframes, ["responsive", "hover"]);
-    },
-  ],
+  //     addUtilities(keyframes, ["responsive", "hover"]);
+  //   },
+  // ],
+  plugins: [require("flowbite/plugin")],
 };
