@@ -2,10 +2,10 @@
 module.exports = {
   content: [
     "index.html",
+    "index.php",
     "src/input.css",
     "js/scripts.js",
     "view/*.html",
-    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
     extend: {
@@ -73,5 +73,4 @@ module.exports = {
   //     addUtilities(keyframes, ["responsive", "hover"]);
   //   },
   // ],
-  plugins: [require("flowbite/plugin")],
 };

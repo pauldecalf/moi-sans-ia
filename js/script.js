@@ -1,71 +1,33 @@
-document.addEventListener("DOMContentLoaded", function () {
-  function addHTML() {
-    var el, i, domEl, fileName, xmlHttp;
+// nav, scroll to the part
 
-    /*Iterate all DOM*/
-    el = document.getElementsByTagName("*");
-    for (i = 0; i < el.length; i++) {
-      domEl = el[i];
+// let nav = document.querySelector("#nav-items");
 
-      /*find the element having w3-include-html attribute*/
-      fileName = domEl.getAttribute("w3-include-html");
-      if (fileName) {
-        /*http request with attribute value as file name*/
-        xmlHttp = new XMLHttpRequest();
-        xmlHttp.onreadystatechange = function () {
-          if (this.readyState == 4) {
-            if (this.status == 200) {
-              domEl.innerHTML = this.responseText;
-            }
-            if (this.status == 404) {
-              domEl.innerHTML = "Page not found.";
-            }
+// for (let i = 0; i < nav.length(); i++) {
+//   nav[i].on("click", (e) => {});
+// }
 
-            /* Remove the attribute and invoke the function again*/
-            domEl.removeAttribute("w3-include-html");
-            addHTML();
-          }
-        };
-        xmlHttp.open("GET", fileName, true);
-        xmlHttp.send();
+// Scrolling banner
 
-        /*function ends*/
-        return;
-      }
-    }
-  }
-  addHTML();
-
-  // nav, scroll to the part
-
-  // let nav = document.querySelector("#nav-items");
-
-  // for (let i = 0; i < nav.length(); i++) {
-  //   nav[i].on("click", (e) => {});
-  // }
-
-  // Scrolling banner
-
-  // function updateCarousel() {
-  //   const itemWidth = document.querySelector(".carousel-item").offsetWidth;
-  //   const newTransformValue = -currentIndex * itemWidth + "px";
-  //   console.log(itemWidth);
-  //   console.log(newTransformValue);
-  //   document.querySelector(".carousel-content").style.transform =
-  //     "translateX(" + newTransformValue + ")";
-  // }
-});
+// function updateCarousel() {
+//   const itemWidth = document.querySelector(".carousel-item").offsetWidth;
+//   const newTransformValue = -currentIndex * itemWidth + "px";
+//   console.log(itemWidth);
+//   console.log(newTransformValue);
+//   document.querySelector(".carousel-content").style.transform =
+//     "translateX(" + newTransformValue + ")";
+// }
 
 // Carousel
 
+const carouselButtons = document.querySelectorAll("#carousel-buttons button");
+
 let currentIndex = 0;
 const slides = document.getElementsByClassName("carousel-item");
-slides[1].classList.add("hidden");
-// slides[2].classList.add("hidden");
 const totalSlides = slides.length;
 
 function nextSlide() {
   slides[currentIndex].classList.add("hidden");
+  carouselButtons[currentIndex].classList.add("opacity-30");
   console.log("next" + currentIndex);
   if (currentIndex < totalSlides - 1) {
     currentIndex++;
@@ -77,11 +39,12 @@ function nextSlide() {
     slides[currentIndex].classList.remove("grid");
   }
   slides[currentIndex].classList.add("grid");
-  // updateCarousel();
+  carouselButtons[currentIndex].classList.remove("opacity-30");
 }
 
 function prevSlide() {
   slides[currentIndex].classList.add("hidden");
+  carouselButtons[currentIndex].classList.add("opacity-30");
   if (currentIndex > 0) {
     currentIndex--;
     slides[currentIndex].classList.remove("hidden");
@@ -92,7 +55,7 @@ function prevSlide() {
     slides[currentIndex].classList.remove("grid");
   }
   slides[currentIndex].classList.add("grid");
-  // updateCarousel();
+  carouselButtons[currentIndex].classList.remove("opacity-30");
 }
 
 function openNav() {
@@ -105,4 +68,164 @@ function closeNav() {
   menu = document.querySelector("#menu");
   menu.classList.remove("flex");
   menu.classList.add("hidden");
+}
+
+const carouselItems = document.querySelectorAll(".carousel-item");
+
+function closeCar() {
+  for (let i = 0; i < carouselItems.length; i++) {
+    if (carouselItems[i].classList.contains("grid")) {
+      carouselItems[i].classList.remove("grid");
+      carouselItems[i].classList.add("hidden");
+      carouselButtons[i].classList.add("opacity-30");
+    }
+  }
+}
+
+function openCar(i) {
+  closeCar();
+  carouselItems[i].classList.remove("hidden");
+  carouselItems[i].classList.add("grid");
+  carouselButtons[i].classList.remove("opacity-30");
+}
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+const carousel = document.getElementById("carousel");
+
+carousel.addEventListener("touchstart", handleTouchStart, false);
+carousel.addEventListener("touchmove", handleTouchMove, false);
+carousel.addEventListener("touchend", handleTouchEnd, false);
+
+function handleTouchStart(event) {
+  touchStartX = event.touches[0].clientX;
+}
+
+function handleTouchMove(event) {
+  touchEndX = event.touches[0].clientX;
+}
+
+function handleTouchEnd() {
+  const difference = touchStartX - touchEndX;
+
+  if (Math.abs(difference) > 50) {
+    // Si la différence est assez grande, considérez-le comme un swipe
+    if (difference > 0) {
+      // Swipe vers la gauche, faites défiler vers la diapo suivante
+      nextSlide();
+    } else {
+      prevSlide();
+    }
+  }
+}
+
+// Carousel risks phone
+
+let risksIndex = 0;
+let risksItem = document.querySelectorAll(".risks-cols");
+let totalRisksItem = risksItem.length;
+
+const risksCarouselButtons = document.querySelectorAll(
+  "#risks-carousel-buttons button"
+);
+const risksCarousel = document.getElementById("risk-carousel");
+
+risksCarousel.addEventListener("touchstart", risksHandleTouchStart, false);
+risksCarousel.addEventListener("touchmove", risksHandleTouchMove, false);
+risksCarousel.addEventListener("touchend", risksHandleTouchEnd, false);
+
+function nextRisksSlide() {
+  risksItem[risksIndex].classList.add("hidden");
+  risksCarouselButtons[risksIndex].classList.add("opacity-30");
+  if (risksIndex < totalRisksItem - 1) {
+    risksIndex++;
+    risksItem[risksIndex].classList.remove("hidden");
+    risksItem[risksIndex].classList.remove("grid");
+  } else {
+    risksIndex = 0;
+    risksItem[risksIndex].classList.remove("hidden");
+    risksItem[risksIndex].classList.remove("grid");
+  }
+  risksItem[risksIndex].classList.add("grid");
+  risksCarouselButtons[risksIndex].classList.remove("opacity-30");
+}
+
+function prevRisksSlide() {
+  risksItem[risksIndex].classList.add("hidden");
+  risksCarouselButtons[risksIndex].classList.add("opacity-30");
+  if (risksIndex > 0) {
+    risksIndex--;
+    risksItem[risksIndex].classList.remove("hidden");
+    risksItem[risksIndex].classList.remove("grid");
+  } else {
+    risksIndex = totalRisksItem - 1;
+    risksItem[risksIndex].classList.remove("hidden");
+    risksItem[risksIndex].classList.remove("grid");
+  }
+  risksItem[risksIndex].classList.add("grid");
+  risksCarouselButtons[risksIndex].classList.remove("opacity-30");
+}
+
+function risksHandleTouchStart(event) {
+  touchStartX = event.touches[0].clientX;
+}
+
+function risksHandleTouchMove(event) {
+  touchEndX = event.touches[0].clientX;
+}
+
+function risksHandleTouchEnd() {
+  const difference = touchStartX - touchEndX;
+
+  if (Math.abs(difference) > 50) {
+    // Si la différence est assez grande, considérez-le comme un swipe
+    if (difference > 0) {
+      // Swipe vers la gauche, faites défiler vers la diapo suivante
+      nextRisksSlide();
+    } else {
+      prevRisksSlide();
+    }
+  }
+}
+
+//show actu
+
+let showButton = document.querySelector("#show-actu");
+let noShowButton = document.querySelector("#no-show-actu");
+
+actu = document.querySelectorAll("#actu-grid a");
+
+function showActu() {
+  for (let i = 0; i < actu.length; i++) {
+    actu[i].classList.add("grid");
+    actu[i].classList.remove("hidden");
+  }
+  showButton.classList.add("hidden");
+  showButton.classList.remove("grid");
+  noShowButton.classList.add("grid");
+  noShowButton.classList.remove("hidden");
+}
+
+function noShowActu() {
+  for (let i = 2; i < actu.length; i++) {
+    actu[i].classList.add("hidden");
+    actu[i].classList.remove("grid");
+  }
+  showButton.classList.add("grid");
+  showButton.classList.remove("hidden");
+  noShowButton.classList.add("hidden");
+  noShowButton.classList.remove("grid");
+}
+
+// Close menu
+
+let menu = document.querySelector("#menu");
+let menuItems = document.querySelectorAll("#menu a");
+
+for (let i = 0; i < menuItems.length; i++) {
+  menuItems[i].addEventListener("click", () => {
+    menu.classList.add("hidden");
+    menu.classList.remove("remove");
+  });
 }

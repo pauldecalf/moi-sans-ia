@@ -1,11 +1,15 @@
-<div class="">
-  <h3 class="text-intro font-introbold text-end relative top-[-2.70rem]">
+<div class="mt-20 md:mt-0">
+  <h3 class="text-title md:text-intro font-introbold w-11/12 relative m-auto">
     Actualités
   </h3>
-  <div class="grid grid-cols-4 gap-x-2 gap-y-1 w-10/12 m-auto mt-5">
+  <div
+    class="grid md:grid-cols-4 gap-x-2 gap-y-1 w-11/12 m-auto mt-5"
+    id="actu-grid"
+  >
     <a
       href="https://www.lemonde.fr/economie/article/2023/11/25/intelligence-artificielle-le-monde-de-la-culture-redoute-une-spoliation-massive_6202319_3234.html"
       target="_blank"
+      class="mb-4 md:mb-0"
     >
       <img src="./img/actu1.png" alt="" />
       <p class="font-black">
@@ -21,6 +25,7 @@
     <a
       href="https://leclaireur.fnac.com/article/386850-lintelligence-artificielle-peut-elle-causer-la-disparition-de-lintelligence-humaine/"
       target="_blank"
+      class="mb-4 md:mb-0"
     >
       <img src="./img/actu2.png" alt="" />
       <p class="font-black">
@@ -36,6 +41,7 @@
     <a
       href="https://www.eurosport.fr/formule-1/grand-prix-d-abu-dhabi/2023/l-intelligence-artificielle-testee-a-abu-dhabi-pour-en-finir-avec-les-problemes-de-limite-de-piste_sto9894151/story.shtml"
       target="_blank"
+      class="hidden md:grid mb-4 md:mb-0"
     >
       <img src="./img/actu3.png" alt="" />
       <p class="font-black">
@@ -52,6 +58,7 @@
     <a
       href="https://www.cnews.fr/monde/2023-11-23/intelligence-artificielle-qui-sont-matthew-butterick-et-joseph-saveri-les-deux"
       target="_blank"
+      class="hidden md:grid mb-4 md:mb-0"
     >
       <img src="./img/actu4.png" alt="" />
       <p class="font-black">
@@ -67,6 +74,7 @@
     <a
       href="https://www.lefigaro.fr/conjoncture/vladimir-poutine-veut-son-intelligence-artificielle-prorusse-20231124"
       target="_blank"
+      class="hidden md:grid mb-4 md:mb-0"
     >
       <img src="./img/actu5.png" alt="" />
       <p class="font-black">
@@ -81,6 +89,7 @@
     <a
       href="https://www.lejdd.fr/economie/chat-gpt-intelligence-artificielle-management-tres-humain-139890"
       target="_blank"
+      class="hidden md:grid mb-4 md:mb-0"
     >
       <img src="./img/actu6.png" alt="" />
       <p class="font-black">
@@ -96,6 +105,7 @@
     <a
       href="https://www.ledauphine.com/economie/2023/11/25/une-conference-sur-l-intelligence-artificielle"
       target="_blank"
+      class="hidden md:grid mb-4 md:mb-0"
     >
       <img src="./img/actu7.png" alt="" />
       <p class="font-black">
@@ -111,6 +121,7 @@
     <a
       href="https://www.lesechos.fr/idees-debats/editos-analyses/lintelligence-artificielle-internet-en-pire-2031106"
       target="_blank"
+      class="hidden md:grid mb-4 md:mb-0"
     >
       <img src="./img/actu8.png" alt="" />
       <p class="font-black">L'intelligence artificielle : Internet en pire ?</p>
@@ -120,5 +131,20 @@
         maux...
       </p>
     </a>
+
+    <button
+      class="grid md:hidden border-black border-solid border-2 w-[35%] m-auto mt-8 bg-pink py-1 rounded-lg"
+      onclick="showActu()"
+      id="show-actu"
+    >
+      <span class="font-black">Voir plus</span>
+    </button>
+    <button
+      class="hidden border-black border-solid border-2 w-[35%] m-auto mt-8 bg-pink py-1 rounded-lg"
+      onclick="noShowActu()"
+      id="no-show-actu"
+    >
+      <span class="font-black">Voir moins</span>
+    </button>
   </div>
 </div>
