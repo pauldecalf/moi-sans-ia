@@ -41,9 +41,19 @@ module.exports = {
           "0%": { transform: "translateX(-200%)" },
           "100%": { transform: "translateX(0)" },
         },
+        "color-banner": {
+          "0%": { "background-color": "#F2C107" },
+          "16%": { "background-color": "#E7101D" },
+          "32%": { "background-color": "#F39ED6" },
+          "49%": { "background-color": "#1C5FC5" },
+          "66%": { "background-color": "#0D9D57" },
+          "83%": { "background-color": "#E96404" },
+          "100%": { "background-color": "#F2C107" },
+        },
       },
       animation: {
         banner: "banner 10s forwards linear infinite",
+        "color-banner": "color-banner 20s linear infinite",
       },
       translate: {
         "banner-right": "-200%",

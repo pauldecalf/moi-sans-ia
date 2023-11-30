@@ -8,7 +8,7 @@
   <div
     role="menu"
     id="nav-items"
-    class="col-span-5 w-11/12 grid grid-cols-6 place-items-center rounded-full border-black border-solid border-2 px-6 py-2"
+    class="hidden md:grid col-span-5 w-11/12 grid-cols-6 place-items-center rounded-full border-black border-solid border-2 px-6 py-2"
   >
     <a role="menuitem" href="#" class="font-extrabold col-start-3"
       ><p class="hover:text-yellow">Présentation</p></a
@@ -22,5 +22,35 @@
     <a role="menuitem" href="#" class="font-extrabold col-start-6"
       ><p class="hover:text-blue">Contact</p></a
     >
+  </div>
+  <button class="md:hidden col-start-6" onclick="openNav()">
+    <img src="../img/nav.png" alt="navigation menu" />
+  </button>
+  <div
+    id="menu"
+    class="absolute w-full h-full hidden z-30 bg-grey top-0 left-0 p-4 flex-col"
+  >
+    <div class="grid grid-cols-6 place-items-start">
+      <img
+        role="img"
+        class="col-span-1"
+        src="img/logo.png"
+        alt="Logo de l'entreprise"
+      />
+      <button
+        class="col-start-6 grid place-items-center place-self-center"
+        onclick="closeNav()"
+      >
+        <img src="../img/nav-close.png" alt="navigation menu" />
+      </button>
+    </div>
+    <div class="grid mt-5">
+      <h1 class="font-introbold text-title">Le MOI sans IA</h1>
+      <hr class="border-solid border-2 border-black w-8/12" />
+      <a href=""><p class="mt-4 font-introbold">Présentation</p></a>
+      <a href=""><p class="mt-4 font-introbold">Actualités</p></a>
+      <a href=""><p class="mt-4 font-introbold">Notre campagne</p></a>
+      <a href=""><p class="mt-4 font-introbold">Contact</p></a>
+    </div>
   </div>
 </div>
