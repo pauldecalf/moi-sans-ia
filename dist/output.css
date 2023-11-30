@@ -1059,10 +1059,6 @@ input:checked + .toggle-bg {
   position: relative;
 }
 
-.sticky {
-  position: sticky;
-}
-
 .inset-0 {
   inset: 0px;
 }
@@ -1087,20 +1083,12 @@ input:checked + .toggle-bg {
   left: 16rem;
 }
 
-.left-\[-2\.5rem\] {
-  left: -2.5rem;
-}
-
 .right-0 {
   right: 0px;
 }
 
 .right-40 {
   right: 10rem;
-}
-
-.right-\[-2\.5rem\] {
-  right: -2.5rem;
 }
 
 .top-0 {
@@ -1117,10 +1105,6 @@ input:checked + .toggle-bg {
 
 .top-\[1\.8rem\] {
   top: 1.8rem;
-}
-
-.top-\[50\%\] {
-  top: 50%;
 }
 
 .z-10 {
@@ -1159,10 +1143,6 @@ input:checked + .toggle-bg {
   grid-column: span 5 / span 5;
 }
 
-.col-start-2 {
-  grid-column-start: 2;
-}
-
 .col-start-3 {
   grid-column-start: 3;
 }
@@ -1185,16 +1165,6 @@ input:checked + .toggle-bg {
 
 .m-auto {
   margin: auto;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
 }
 
 .mb-1 {
@@ -1265,14 +1235,6 @@ input:checked + .toggle-bg {
   height: 2.25rem;
 }
 
-.h-\[30rem\] {
-  height: 30rem;
-}
-
-.h-auto {
-  height: auto;
-}
-
 .h-full {
   height: 100%;
 }
@@ -1299,18 +1261,6 @@ input:checked + .toggle-bg {
 
 .w-8\/12 {
   width: 66.666667%;
-}
-
-.w-\[100\%\] {
-  width: 100%;
-}
-
-.w-\[50\%\] {
-  width: 50%;
-}
-
-.w-\[75\%\] {
-  width: 75%;
 }
 
 .w-full {
@@ -1431,10 +1381,6 @@ input:checked + .toggle-bg {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1491,10 +1437,6 @@ input:checked + .toggle-bg {
   justify-content: space-between;
 }
 
-.gap-5 {
-  gap: 1.25rem;
-}
-
 .gap-x-10 {
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
@@ -1505,17 +1447,8 @@ input:checked + .toggle-bg {
        column-gap: 0.5rem;
 }
 
-.gap-x-5 {
-  -moz-column-gap: 1.25rem;
-       column-gap: 1.25rem;
-}
-
 .gap-y-1 {
   row-gap: 0.25rem;
-}
-
-.gap-y-2 {
-  row-gap: 0.5rem;
 }
 
 .gap-y-5 {
@@ -1728,18 +1661,9 @@ input:checked + .toggle-bg {
   text-align: end;
 }
 
-.font-primary {
-  font-family: Raleway, serif;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .text-intro {
@@ -1760,10 +1684,6 @@ input:checked + .toggle-bg {
   font-size: 2rem;
 }
 
-.text-us {
-  font-size: 6rem;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1771,10 +1691,6 @@ input:checked + .toggle-bg {
 
 .font-black {
   font-weight: 900;
-}
-
-.font-bold {
-  font-weight: 700;
 }
 
 .font-extrabold {
@@ -1799,10 +1715,6 @@ input:checked + .toggle-bg {
 
 .leading-9 {
   line-height: 2.25rem;
-}
-
-.leading-\[50px\] {
-  line-height: 50px;
 }
 
 .leading-tight {
