@@ -1107,6 +1107,18 @@ input:checked + .toggle-bg {
   top: 1.8rem;
 }
 
+.left-\[-2\.5rem\] {
+  left: -2.5rem;
+}
+
+.right-\[-2\.5rem\] {
+  right: -2.5rem;
+}
+
+.top-\[50\%\] {
+  top: 50%;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1159,12 +1171,26 @@ input:checked + .toggle-bg {
   grid-column-start: 6;
 }
 
+.col-start-2 {
+  grid-column-start: 2;
+}
+
 .m-0 {
   margin: 0px;
 }
 
 .m-auto {
   margin: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .mb-1 {
@@ -1239,6 +1265,10 @@ input:checked + .toggle-bg {
   height: 100%;
 }
 
+.h-\[30rem\] {
+  height: 30rem;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1265,6 +1295,18 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[100\%\] {
+  width: 100%;
+}
+
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-\[75\%\] {
+  width: 75%;
 }
 
 .flex-1 {
@@ -1397,6 +1439,10 @@ input:checked + .toggle-bg {
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1437,6 +1483,10 @@ input:checked + .toggle-bg {
   justify-content: space-between;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .gap-x-10 {
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
@@ -1453,6 +1503,15 @@ input:checked + .toggle-bg {
 
 .gap-y-5 {
   row-gap: 1.25rem;
+}
+
+.gap-x-5 {
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+
+.gap-y-2 {
+  row-gap: 0.5rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1689,6 +1748,15 @@ input:checked + .toggle-bg {
   line-height: 1.75rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-us {
+  font-size: 6rem;
+}
+
 .font-black {
   font-weight: 900;
 }
@@ -1709,6 +1777,10 @@ input:checked + .toggle-bg {
   font-weight: 600;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .leading-6 {
   line-height: 1.5rem;
 }
@@ -1719,6 +1791,10 @@ input:checked + .toggle-bg {
 
 .leading-tight {
   line-height: 1.25;
+}
+
+.leading-\[50px\] {
+  line-height: 50px;
 }
 
 .text-gray-500 {
