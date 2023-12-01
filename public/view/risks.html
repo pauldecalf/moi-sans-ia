@@ -1,0 +1,69 @@
+<div
+  class="bg-orange my-5 relative md:pb-[3rem] pb-0 grid place-items-center h-[15rem] md:h-auto"
+>
+  <h3 class="font-introbold w-11/12 m-auto relative text-title sm:text-intro">
+    Les risques
+  </h3>
+  <div
+    class="grid md:grid-cols-3 py-10 gap-x-10 gap-y-2 w-11/12 m-auto text-center md:text-left md:h-full h-[12.5rem]"
+    id="risk-carousel"
+  >
+    <div class="risks-cols grid">
+      <p class="font-introbold text-xl sm:text-2xl mb-2">Perte d'emploi</p>
+      <p class="font-introbold text-xl sm:text-2xl mb-2">
+        Dépendance technologique
+      </p>
+      <p class="font-introbold text-xl sm:text-2xl mb-2">
+        Responsabilité et éthique
+      </p>
+      <p class="font-introbold text-xl sm:text-2xl mb-2">
+        Sécurité et confidentialité
+      </p>
+    </div>
+    <div class="risks-cols hidden md:grid">
+      <p class="font-introbold text-xl sm:text-2xl mb-2">Biais algorithmique</p>
+      <p class="font-introbold text-xl sm:text-2xl mb-2">
+        Utilisation malveillante
+      </p>
+      <p class="font-introbold text-xl sm:text-2xl mb-2">
+        Impact sur la vie privée
+      </p>
+    </div>
+    <div class="risks-cols hidden md:grid">
+      <p class="font-introbold text-xl sm:text-2xl mb-2">Chômage structurel</p>
+      <p class="font-introbold text-xl sm:text-2xl mb-2">
+        Manque de transparence
+      </p>
+      <p class="font-introbold text-xl sm:text-2xl mb-2">
+        Éthique dans la conception de l'IA
+      </p>
+    </div>
+  </div>
+  <img
+    class="absolute bottom-[-1rem] left-0 w-[10%]"
+    src="./img/wire.png"
+    alt="fil"
+  />
+  <img
+    class="absolute top-[-3rem] right-0 w-[10%]"
+    src="./img/dots.png"
+    alt="points"
+  />
+  <div
+    id="risks-carousel-buttons"
+    class="w-4/12 md:w-2/12 md:hidden mx-auto grid grid-cols-3 gap-x-1 absolute bottom-[-2rem] md:bottom-0 place-items-center"
+  >
+    <button
+      class="bg-blue w-[85%] h-2 rounded"
+      onclick="openRisksCar(0)"
+    ></button>
+    <button
+      class="bg-blue w-[85%] h-2 rounded opacity-30"
+      onclick="openRisksCar(1)"
+    ></button>
+    <button
+      class="bg-blue w-[85%] h-2 rounded opacity-30"
+      onclick="openRisksCar(2)"
+    ></button>
+  </div>
+</div>
