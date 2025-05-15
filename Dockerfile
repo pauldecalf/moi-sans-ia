@@ -1,10 +1,10 @@
 FROM php:8.2-apache
 
-# Copie des fichiers du projet
-COPY . /var/www/html/
-
-# Activation de mod_rewrite si nécessaire
+# Active mod_rewrite si besoin
 RUN a2enmod rewrite
 
-# Dépendances supplémentaires si besoin
-# RUN docker-php-ext-install pdo pdo_mysql ...
+# Supprime le warning ServerName
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
+# Copie des fichiers
+COPY . /var/www/html/
