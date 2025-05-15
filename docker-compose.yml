@@ -2,7 +2,7 @@ services:
   web:
     build: .
     ports:
-      - "80:80"
+      - "8081:80" # <--- ici on utilise le port 8081 sur l'hôte au lieu de 80
     volumes:
       - .:/var/www/html
     restart: always
