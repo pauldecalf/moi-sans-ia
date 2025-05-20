@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le MOI sans IA - Campagne de sensibilisation contre la dépendance aux intelligences artificielles. Think different, Think humain !">
+    <meta name="keywords" content="IA, intelligence artificielle, dépendance technologique, campagne de sensibilisation, MOI sans IA">
+    <meta name="author" content="Paul Decalf">
+    <meta property="og:title" content="Le MOI sans IA | Dispositif contre la dépendance excessive aux IAs">
+    <meta property="og:description" content="Campagne de sensibilisation contre la dépendance aux intelligences artificielles. Think different, Think humain !">
+    <meta property="og:url" content="https://moi-sans-ia.pauldecalf.fr/">
+    <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -10,7 +17,7 @@
       rel="stylesheet"
     />
     <link href="dist/output.css" rel="stylesheet" />
-    <title>Le MOI sans IA</title>
+    <title>Le MOI sans IA | Dispositif contre la dépendance excessive aux IAs</title>
 </head>
 <body>
     <main class="bg-grey w-100 h-auto font-primary">
